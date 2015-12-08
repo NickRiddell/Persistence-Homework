@@ -1,0 +1,7 @@
+<% @hostels.each do |hostel| %>
+  I visited <%= hostel.name %> in <%= hostel.visited %>.
+  <%= link_to("Show #{hostel.name}", hostel_path(hostel)) %>
+  <%= button_to('Delete Hostel', hostel_path(hostel), method: :delete, data: { confirm: 'Delete Hostel? Are you sure?' }) %>
+  <%= link_to('Edit Hostel', edit_hostel_path(hostel)) %>
+  <br>
+<% end %>
